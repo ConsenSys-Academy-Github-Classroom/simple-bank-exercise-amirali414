@@ -86,7 +86,7 @@ contract SimpleBank {
 
       balances[msg.sender] -= withdrawAmount;
 
-      if(!msg.sender.transfer(withdrawAmount)){
+      if(!msg.sender.send(withdrawAmount)){
 
         balances[msg.sender] += withdrawAmount; //CHECK: Send?
 
